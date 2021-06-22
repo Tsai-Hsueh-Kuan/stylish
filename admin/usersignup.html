@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sign up page</title>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+  </head>
+  <body>
+    <div id="headerpage"></div>
+    <script>   
+          $("#headerpage").load("/header.html");
+    </script>
+    <div class="signuppart">
+        <h1>沒有帳號 這邊註冊</h1>
+            <label>請輸入名字</label>
+            <input type="text" name="name" id="name" class="form-data" required>
+            <br>
+            <label>請輸入信箱</label>
+            <input type="email" name="email" id="email" class="form-data" required>
+            <br>
+            <label>請輸入密碼</label>
+            <input type="password" name="password" id="password" class="form-data" required>
+            <br>
+          <p><button id="button" class="button">sign up</button></p>
+    </div>
+    <div id="footerpage"></div>
+    <script>
+          $("#footerpage").load("/footer.html");
+    </script>
+</body>
+<link rel="stylesheet" href="/reset.css">
+<link rel="stylesheet" href="/header.css">
+<link rel="stylesheet" href="/usersignup.css">
+<link rel="stylesheet" href="/footer.css">
+<script src="/usersignup.js"></script>
+</html>

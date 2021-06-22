@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>userprofile page</title>
+    <link rel="stylesheet" href="/reset.css">
+    <link rel="stylesheet" href="/header.css">
+    <link rel="stylesheet" href="/userprofile.css">
+    <link rel="stylesheet" href="/footer.css">
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+</head>
+<body>
+  <div id="headerpage"></div>
+  <script>   
+        $("#headerpage").load("/header.html");
+  </script>
+
+    <div class="userprofile">
+    <div class="profiletitle">會員基本資訊</div>
+        <div class="profiledata">
+           <img class="picture" id="picture" src="/images/smile.png" >
+           <div class="detail">
+            <h1 id = "name" class="name"></h1>
+            <h1 id = "email" class="email"></h1>
+           </div>     
+        </div>   
+         <button id="signout" onclick="signout()">點我 登出</button>
+    </div>
+    
+    <div id="footerpage"></div>
+    <script>
+          $("#footerpage").load("/footer.html");
+    </script>
+    
+</body>
+<script src="/userprofile.js"></script>
+</html>

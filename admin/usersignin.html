@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sign in page</title>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+</head>
+<body>
+  <div id="headerpage"></div>
+  <script>   
+        $("#headerpage").load("/header.html");
+  </script>
+
+    <div class="signinpart">
+        <h1>已有帳號 這邊登入</h1>
+            <label>請輸入信箱</label>
+            <input type="email" name="email" id="email" class="form-data" required>
+            <br>
+            <label>請輸入密碼</label>
+            <input type="password" name="password" id="password" class="form-data" required>
+            <br>
+          <p><button class="button" id="button">sign in</button></p>  
+            <br>
+            <br>
+            <fb:login-button class="fbbutton" scope="public_profile,email" onlogin="checkLoginState();" ></fb:login-button>
+            <div id="status"></div>
+          <br>
+          <br>
+          <script>
+            function statusChangeCallback(response) {  // Called with the results from FB.getLoginStatus()
+              if (response.status === 'connected') {   // Logged into your webpage and Facebook.
+                testAPI();  
+              } else {                                 // Not logged into your webpage or we are unable to tell.
+                document.getElementById('status').innerHTML = 'Please log ' +
+                  'into this webpage.';
+              }
+              if (response.authResponse) {
+              const access_token = response.authResponse.accessToken
+              const data = {
+                provider: 'facebook',
+                access_token: `${access_token}`
+              }
+              fetch('/api/1.0/user/signin', {
+                method: 'POST',
+                body: JSON.stringify(data),
+                headers: { 'Content-Type': 'application/json' }
+              }).then(function (response) {
+                if (response.status === 200) {
+                  return response.json() // 內建promise , send type need json
+                }
+              }).then(data => {
+                const token = (data.data.access_token)
+                localStorage.setItem('token', `${token}`)
+                window.location.assign('/user/profile')
+              })
+            } else {
+              return response
+            }
+            }
+
+            function checkLoginState() {               // Called when a person is finished with the Login Button.
+              FB.getLoginStatus(function(response) {   // See the onlogin handler
+                statusChangeCallback(response);
+              });
+            }
+
+            window.fbAsyncInit = function() {
+              FB.init({
+                appId      : '1201503036934351',
+                cookie     : true,                     // Enable cookies to allow the server to access the session.
+                xfbml      : true,                     // Parse social plugins on this webpage.
+                version    : 'v10.0'           // Use this Graph API version for this call.
+              });
+              onlogin="checkLoginState();"
+              checkLoginState()
+            FB.getLoginStatus(function(response) {   // Called after the JS SDK has been initialized.
+              statusChangeCallback(response);        // Returns the login status.
+            });
+          };
+
+          function testAPI() {                      // Testing Graph API after login.  See statusChangeCallback() for when this call is made.
+            console.log('Welcome!  Fetching your information.... ');
+            FB.api('/me', function(response) {
+              console.log('Successful login for: ' + response.name);
+              document.getElementById('status').innerHTML =
+                'Thanks for logging in, ' + response.name + '!';
+            });
+          }
+          </script>
+         
+      <h1>還沒有帳號？</h1>
+          <br>
+        <a class="button" id="signupbutton" href="/user/signup">點我註冊</a>
+    </div>
+
+    <div id="footerpage"></div>
+    <script>
+          $("#footerpage").load("/footer.html");
+    </script>
+
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>    
+</body>
+<link rel="stylesheet" href="/reset.css">
+<link rel="stylesheet" href="/header.css">
+<link rel="stylesheet" href="/usersignin.css">
+<link rel="stylesheet" href="/footer.css">
+<script src="/usersignin.js"></script>
+</html>

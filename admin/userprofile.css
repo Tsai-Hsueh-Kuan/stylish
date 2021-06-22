@@ -1,0 +1,42 @@
+.userprofile{
+    padding: 100px 20px;
+    min-height: 77.5vh;
+    margin: 140px auto 0;
+    font-size: 20px;
+    align-items: stretch;
+    text-align: center;
+}
+.profiletitle{
+    padding-bottom: 16px;
+    border-bottom: 1px solid #979797;
+    font-size: 24px;
+    font-weight: bold;
+}
+.profiledata{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 24px;
+    flex-wrap: wrap;
+}
+.picture{
+    width: 200px;
+    margin: 0 24px;
+}
+.detail{
+    display: block;
+    font-weight: bold;
+}
+.name{
+    margin: 24px 0px;
+}
+#signout{
+    width: 220px;
+    height: 30px;
+    font-size: 20px;
+    letter-spacing: 4px;
+    color: black;
+    margin-top: 100px;
+    cursor: pointer;
+    border: black solid 1px;
+}

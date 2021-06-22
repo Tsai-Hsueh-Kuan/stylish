@@ -1,0 +1,41 @@
+main{
+    margin: 140px auto ;
+    width: 560px;
+    height: 740px;
+}
+
+#thankyou {
+padding: 100px 20px;
+display: flex;
+flex-direction: column;
+text-align: center;
+}
+
+#thankyou > h2 {
+padding-bottom: 16px;
+border-bottom: 1px solid #979797;
+font-size: 24px;
+font-weight: bold;
+line-height: 36px;
+}
+
+#thankyou > h3 {
+padding-bottom: 15px;
+font-size: 20px;
+font-weight: bold;
+margin-top: 24px;
+}
+
+#thankyou > #number {
+background-color: #eeeeee;
+padding: 5px 10px;
+align-self: center;
+}
+
+#thankyou > a {
+margin-top: 36px;
+}
+
+#thankyou > a:hover {
+color: #8b572a;
+}

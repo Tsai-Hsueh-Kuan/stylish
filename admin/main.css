@@ -1,0 +1,76 @@
+body {
+    margin-top: 140px;
+  }
+  
+#campaigns {
+height: 500px;
+position: relative;
+width: 100vw;
+}
+
+#campaigns > .campaign {
+height: 100%;
+width: 100%;
+position: absolute;
+background-position: center;
+background-color: white ;
+z-index: 1;
+}
+
+#campaigns > .campaign > .campaign_story {
+width: 100%;
+max-width: 1160px;
+height: 228px;
+margin: 166px auto 0px;
+padding-left: 27px;
+font-size: 30px;
+font-weight: 100;
+color: #070707;
+line-height: 57px;
+white-space: pre;
+}
+
+#products{
+    max-width: 1160px;
+    padding: 70px 24px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);/* = 1fr 1fr 1fr */
+    grid-gap: 50px 40px;/* 先colum 再row*/
+    margin: 0 auto;
+}
+
+#products > .product {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+#products > .product > img {
+    width: 100%;
+  }
+
+#products > .product > .product_colors {
+    display: flex;
+    margin-top: 20px;
+  }
+#products > .product > .product_colors > .product_color {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    box-shadow: 0px 0px 1px gray;
+  }
+
+#products > .product > .product_title {
+    margin-top: 20px;
+    line-height: 24px;
+    font-size: 20px;
+    letter-spacing: 4px;
+    color: #3f3a3a;
+    }
+#products > .product > .product_price {
+    margin-top: 10px;
+    line-height: 24px;
+    font-size: 20px;
+    letter-spacing: 4px;
+    color: #3f3a3a;
+    }
+    

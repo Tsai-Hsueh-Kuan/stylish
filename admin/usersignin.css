@@ -1,0 +1,26 @@
+.signinpart{
+    margin: 240px auto;
+    width: 100%;
+    font-size: 20px;
+    line-height: 28px;
+    text-align: center;
+    height: 540px;
+}
+.button{
+    width: 120px;
+    height: 30px;
+    font-size: 20px;
+    letter-spacing: 4px;
+    color: black;
+    margin-top: 20px;
+    cursor: pointer;
+    border: black solid 1px;
+}
+#signupbutton{
+    padding: 10px;
+}
+.fbbutton{
+    font-size: 20px;
+    margin-top: 20px;
+    cursor: pointer;
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>campaign page</title>
+</head>
+<body>
+    <div>
+        <form enctype="multipart/form-data" method="POST" name="fileinfo">
+        <h1>請建構廣告文案</h1>
+            <label>Product ID</label>
+            <input type="text" name="product_id" id="product_id" required > 
+            <br>
+            <br>
+            <label>Picture</label>
+            <input type="file" onchange="readURL(this)" name="picture" id="picture" accept="image/gif, image/jpeg, image/png">
+            <img id="preview_progressbarTW_img" src="#" width="150"/>
+            <br>
+            <br>
+            <label>Story</label>
+            <br>
+            <textarea type="text" name="story" id="story" rows="10" cols="50" required></textarea>
+            <br>
+
+            <label>Product ID</label>
+            <input type="text" name="product_id1" id="product_id1" required > 
+            <br>
+            <br>
+            <label>Picture</label>
+            <input type="file" onchange="readURL(this)" name="picture1" id="picture1" accept="image/gif, image/jpeg, image/png">
+            <img id="preview_progressbarTW_img" src="#" width="150"/>
+            <br>
+            <br>
+            <label>Story</label>
+            <br>
+            <textarea type="text" name="story1" id="story1" rows="10" cols="50" required></textarea>
+            <br>
+
+            <input type="submit" id="submit">
+        </form>
+    </div>
+</body>
+    <script>//預覽
+    function readURL(input){
+        if(input.files && input.files[0]){
+            var imageTagID = input.getAttribute("targetID");
+            var reader = new FileReader();
+            reader.onload = function (e) {
+            var img = document.getElementById('preview_progressbarTW_img');
+            img.setAttribute("src", e.target.result)
+            }
+            reader.readAsDataURL(input.files[0]);
+        }
+    } 
+    </script>
+    <script src="/checkadmin.js"></script>
+    <script src="/campaignkeyin.js"></script>
+</html>
+

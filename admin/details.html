@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script text="text/javascript" src="https://js.tappaysdk.com/tpdirect/v5.5.0"></script>
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <title>details page</title>
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+</head>
+
+<body>
+  <div id="headerpage"></div>
+  <script>   
+        $("#headerpage").load("/header.html");
+  </script>
+  <main>
+    <div id="product">
+      <img class="product_main_image">
+      <div class="product_detail">
+        <div class="product_title"></div>
+        <div class="product_id"></div>
+        <div class="product_price"></div>
+        <div class="product_variants">
+          <div class="product_variant">
+            <div class="product_variant-name">顏色｜</div>
+            <div class="product_colors" id="colors"></div>
+          </div>
+          <div class="product_variant">
+            <div class="product_variant-name">尺寸｜</div>
+            <div class="product_sizes" id="sizes"></div>
+          </div>
+          <div class="product_variant">
+            <div class="product_variant-name">數量｜</div>
+            <div class="product_quantity">
+              <button id="decrement">-</button>
+              <div id="quantity">0</div>
+              <button id="increment">+</button>
+            </div>
+          </div>
+      </div>
+        <button id="add-to-cart">加入購物車</button>
+        <div class="product_note"></div>
+        <div class="product_texture"></div>
+        <div class="product_description"></div>
+        <div class="product_wash"></div>
+        <div class="product_place"></div>
+      </div>
+      <div class="seperator">更多產品資訊</div>
+      <div class="product_story"></div>
+      <div class="images"></div>
+    </div>
+  </main>
+
+  <div id="footerpage"></div>
+    <script>
+          $("#footerpage").load("/footer.html");
+    </script>
+</body>
+<link rel="stylesheet" href="/reset.css">
+<link rel="stylesheet" href="/header.css">
+<link rel="stylesheet" href="/details.css">
+<link rel="stylesheet" href="/footer.css">
+<script src="/details.js"></script>
+</html>

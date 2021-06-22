@@ -1,0 +1,9 @@
+##node_modules
+node_modules/
+*.env
+.env
+*public/
+public/
+images/
+*images/
+*test.yml

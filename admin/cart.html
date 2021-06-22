@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script text="text/javascript" src="https://js.tappaysdk.com/tpdirect/v5.5.0"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <title>cart page</title>
+    <link rel="stylesheet" href="/reset.css">
+    <link rel="stylesheet" href="/header.css">
+    <link rel="stylesheet" href="/footer.css">
+    <link rel="stylesheet" href="/cart.css">    
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+</head>
+
+<body>
+  <div id="headerpage"></div>
+  <script>   
+        $("#headerpage").load("/header.html");
+  </script>
+
+    <div class="paypart">
+        <div class="cart_part">
+            <div class="cart_header">
+                <div class="cart_title" id="cart_title">購物車</div>
+                <div class="item_quantity">數量</div>
+                <div class="item_price">單價</div>
+                <div class="item_subtotal">小計</div>
+                <div class="item_remove"></div>
+            </div>
+        </div>
+        <div id="cartdetail_listout"></div>
+        <div class="selecttitle">
+        <label class="selecttitlelabel">配送國家</label>
+        <select name="shipping" class="shipping" id="shipping">
+            <option>台灣及離島</option>
+        </select>
+        <br>
+        <label class="selecttitlelabel">付款方式</label>
+        <select name="payment" class="payment" id="payment">
+            <option>信用卡付款</option>
+        </select>    
+        </div>
+        <div class="reminder">
+            ※ 提醒您：<br />
+            ● 選擇宅配-請填寫正確收件人資訊，避免包裹配送不達<br />
+            ● 選擇超商-請填寫正確收件人姓名(與證件相符)，避免無法領取
+        </div>
+        <br>
+        <h3 class="form_header">訂購資料</h3>
+        <div class="form_main">
+            <div class="form_item">
+                <label class="form_label">收件人姓名</label>
+                <input type="text" class="form_input" name="name" id="name" required="required">
+                <br>    
+            </div>
+            <div class="form_item">
+                <label class="form_label">Email</label>
+                <input type="email" class="form_input" name="email" id="email" required="required">
+                <br>
+            </div>
+            <div class="form_item">
+                <label class="form_label">手機號碼</label>
+                <input type="tel" class="form_input" name="cellphonenumber" id="cellphonenumber" required="required">
+                <br>
+            </div>
+            <div class="form_item">
+                <label class="form_label">收件地址</label>
+                <input type="text" class="form_input" name="address" id="address" required="required">
+                <br>
+            </div>
+            <div class="form_item">
+                <label class="form_label">配送時間</label>
+                <input type="text" class="form_input" name="time" id="time" required="required">
+                <br>
+            </div>
+        </div>
+        <div class="form_header">付款資料</div>
+        <div class="card">
+            <label class="cardlabel">信用卡資料</label>
+            <div id="cardview-container" style="margin-top: 30px;height: 30px; font-size: 50px; min-width: none; width: 70%;"></div>
+        </div>
+            <div class="summary">
+                <div class="summarysubtotal" id="summarysubtotal">
+                  <div class="name">總金額</div>
+                  <div class="value">NT.<span id="subtotal">0</span></div>
+                </div>
+                <div class="summaryfreight">
+                  <div class="name">運費</div>
+                  <div class="value">NT.<span>60</span></div>
+                </div>
+                <div class="summarytotal" id="summarytotal">
+                  <div class="name">應付金額</div>
+                  <div class="value">NT.<span id="total">60</span></div>
+                </div>
+              </div>
+            <button id="submit-button">確認付款</button>
+    </div>
+
+    <div id="footerpage"></div>
+  <script>
+        $("#footerpage").load("/footer.html");
+  </script>
+</body>
+  <script src="/cart.js"></script>
+</html>
+

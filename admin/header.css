@@ -1,0 +1,212 @@
+header {
+    height: 52px;
+    width: 100vw;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 5;
+    background-color: white;
+    justify-content: center;
+    /* border-bottom: none; */
+  }  
+   
+#logo {
+    height: 24px;
+  }
+header > nav.tags {
+    position: fixed;
+    height: 40px;
+    top: 52px; /*等於header高度讓他緊貼header下方*/
+    background-color: rgb(49,53,56);
+    width: 100vw;
+    align-items: center;
+    justify-content: center; /*置中*/
+    display: flex;
+    color:rgb(130, 130, 130);
+    
+  } 
+
+header > nav.tags > .tag{
+    margin: auto;
+    width: 100%;    
+    border-left:solid 2px #828282;
+    letter-spacing: 24px;
+    text-indent: 24px; /*字首縮排*/
+    font-size: 16px;    /*字體大小*/
+    color: #828282;
+    text-align: center;
+  }
+
+header > nav.tags > .tag-women{
+    border :none;
+}
+
+header > nav.tags > a.tag:hover {
+    color: white;
+    cursor: pointer;
+  }
+
+header > nav.icons {
+    position: fixed;
+    bottom: 0%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 60px;
+    background-color: rgb(49,53,56);
+    margin-left: 0;
+    align-items: center;
+}
+header > nav.icons > a {
+    width: 50%;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+header > nav.icons > a + a{
+    border-left: 1px solid #828282;
+  }
+
+header > nav.icons > a > .mobile-text {
+    display: block;
+    font-size: 16px;
+    color: #ffffff
+}
+
+header > nav.icons > a > .icon-cart {
+    background-image: url("images/cart-mobile.png");
+    background-repeat: no-repeat;
+    position: relative;
+    width: 44px;
+    height: 44px;
+}
+header > nav.icons > a > .icon-cart > .count {
+    position: absolute;
+    text-align: center;
+    background-color: #8b572a;
+    font-weight: bold;
+    border-radius: 50%;
+    color: #ffffff;
+    opacity: 0.8;
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    bottom: 0;
+    right: 0;
+}
+
+header > nav.icons > a > .icon-profile {
+    background-image: url("images/member-mobile.png");
+    background-repeat: no-repeat;
+    position: relative;
+    width: 44px;
+    height: 44px;
+}
+
+
+header > input#search {
+    height: 40px;
+    position: absolute;
+    right: 10px;
+    border: none;
+    cursor: pointer;
+    background-image: url("images/search.png");
+    background-repeat: no-repeat;
+    background-position: right center;
+    margin-left: auto;
+    background-size: 32px;
+    font-size: 16px;
+    width: 0px;
+    padding: 20px;
+  }
+
+@media only screen and (min-width: 1024px) {
+
+header {
+    height: 140px;
+    align-items:  center;
+    border-bottom: 40px solid  rgb(49,53,56);
+    justify-content: left;
+}
+#logo {
+    height: 48px;
+  }
+
+header > nav.tags {
+    width: 30vw;
+    min-width: 30vw;
+    
+    position: relative;
+    top: 0;
+    left: 0;
+    background-color: white;
+    color: #3f3a3a;
+    
+  } 
+
+header > nav.tags > a.tag + a.tag {
+      border-left: 2px solid #3f3a3a;
+  }
+
+header > nav.tags > a.tag:hover {
+    color: #8b572a;
+    cursor: pointer;
+  }
+header > nav.tags > .tag{
+  max-width: 10vw;
+  letter-spacing: 16px;
+  text-indent: 16px;
+  font-size: 20px;
+  color: #3f3a3a;
+  text-align: center;
+  height: 20px;
+  flex-grow:1;
+  margin: 0;
+  white-space: nowrap;
+  }
+
+
+header > nav.icons {
+    bottom: auto;
+    width: auto;
+    right: 0;
+    background:none;
+}
+header > nav.icons > a {
+    width: auto;
+    height: auto;
+  }
+
+
+header > nav.icons > a + a{
+    border: none;
+  }
+
+header > nav.icons > a > .icon-cart {
+    background-image: url("images/cart.png");
+    position: fixed;
+    right: 116px;
+}
+
+header > nav.icons > a > .icon-profile {
+    background-image: url("images/member.png");
+    position: fixed;
+    right: 30px;
+}
+
+header > input#search {
+  margin-left: auto;
+  right: 202px;
+  width: 214px;
+  padding: 8px 48px 8px 20px;
+  border: solid 1px #979797;
+  border-radius: 20px;
+  outline: none;
+  font-size: 20px;
+  background-size: auto;
+  }
+}

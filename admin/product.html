@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product keyin page</title>
+</head>
+<body>
+    <p>
+        <div>
+            <form enctype="multipart/form-data" method="POST" name="fileinfo">
+                <label>id</label>
+                <input type="number" id="info_id" name="id">
+                <br>
+                <label>catagory</label>
+                <select name="catagory" id="catagory">
+                    <option value="men">men</option>
+                    <option value="men">women</option>
+                    <option value="men">accessories</option>
+                </select>
+                <br>
+                <label>title</label>
+                <input type="text" id="info_title" name="title">
+                <br>
+                <label>description</label>
+                <input type="text" id="info_description" name="description">
+                <br>
+                <label>price</label>
+                <input type="number" id="info_price" name="price">
+                <br>
+                <label>texture</label>
+                <input type="text" id="info_texture" name="texture">
+                <br>
+                <label>wash</label>
+                <input type="text" id="info_wash" name="wash">
+                <br>
+                <label>place</label>
+                <input type="text" id="info_place" name="place">
+                <br>
+                <label>note</label>
+                <input type="text" id="info_note" name="note">
+                <br>
+                <label>story</label>
+                <input type="text" id="info_story" name="story">
+                <br>
+                <label>sizes</label>
+                <input type="text" id="info_sizes" name="sizes">
+                <br>
+                <label>main_image</label>
+                <input type="file" id="info_mainimage" name="main_image">
+                <br>
+                <label>images</label>
+                <input type="file" name="images" multiple>
+                <br>
+                <label>color_name</label>
+                <input type="text" id="info_colorname" name="color_name">
+                <br>
+                <label>color_code</label>
+                <input type="text" id="info_colorcode" name="color_code">
+                <br>
+                <input type="submit">
+            </form>
+
+            <form enctype="multipart/form-data" method="POST" name="variant_form">
+                <label>id</label>
+                <input type="text" name="id" id="id" placeholder="product ID">
+                <br>
+                <label>color_code</label>
+                <input type="text" id="code" name="color_code">
+                <br>
+                <label>size</label>
+                <input type="text" id="size" name="size">
+                <br>
+                <label>stock</label>
+                <input type="text" id="stock" name="stock">
+                <br>
+                <input type="submit">
+            </form>
+        </div>
+    </p>        
+</body>
+<script src="/checkadmin.js"></script>
+<script src="/product.js"></script>
+</html>

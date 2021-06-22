@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script text="text/javascript" src="https://js.tappaysdk.com/tpdirect/v5.5.0"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <title>thankyou page</title>
+    <link rel="stylesheet" href="/reset.css">
+    <link rel="stylesheet" href="/header.css">
+    <link rel="stylesheet" href="/footer.css">
+    <link rel="stylesheet" href="/thankyou.css">
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+</head>
+
+<body>
+  <div id="headerpage"></div>
+  <script>   
+        $("#headerpage").load("/header.html");
+  </script>
+    <main>
+        <div id="thankyou">
+          <h2>感謝您的購買，我們會盡快將商品送達！</h2>
+          <h3>請記住以下訂單編號，以便查詢</h3>
+          <div id="number"></div>
+          <a href="/">繼續購物</a>
+    </main>
+    <div id="footerpage"></div>
+    <script>
+          $("#footerpage").load("/footer.html");
+    </script>
+</body>
+    <script src="/thankyou.js"></script>
+</html>
+
