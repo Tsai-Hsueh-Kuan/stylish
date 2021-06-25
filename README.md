@@ -70,11 +70,6 @@ An e-commerce shopping website for fashionable clothing.
 
 <img width="800" src="https://d3cek75nx38k91.cloudfront.net/stylish/stylish_architecture.png">
 
-<!-- 
-## Database Schema
-
-<img width="800" src="https://d3cek75nx38k91.cloudfront.net/stylish/stylish_architecture.png"> -->
-
 ## Features
 
 - Display all products or by category
